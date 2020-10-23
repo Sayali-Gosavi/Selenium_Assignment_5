@@ -36,7 +36,7 @@ public class TakeScreenshots {
 //		taking screenshots
 	try {
 		File screenshot = ((TakesScreenshot)d).getScreenshotAs(OutputType.FILE);
-		File demo = new File("C:\\Users\\User\\Desktop\\pic.jpg");
+		File demo = new File("E:\\Reskill\\SELENIUM\\Picture\\Pic.jpg");
 		Files.copy(screenshot,demo);
 	}catch (IOException e) {
 		System.out.println("Message : "+e.getMessage());
