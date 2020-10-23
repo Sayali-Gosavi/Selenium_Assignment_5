@@ -14,6 +14,7 @@ import org.apache.poi.util.SystemOutLogger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -43,6 +44,8 @@ public class ReadExcelFile {
 		for(int i=1;i<=rowcount;i++) {
 			int SrNo = (int) sheet.getRow(i).getCell(0).getNumericCellValue();
 			String Name =  sheet.getRow(i).getCell(1).getStringCellValue();
+			
+			Assert.assertNotNull(Name);
 			
 			System.out.print(SrNo);
 			System.out.print("  ");
